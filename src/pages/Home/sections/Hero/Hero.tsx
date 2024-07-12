@@ -7,19 +7,36 @@ import StyledButtons from "../../../../componets/StyledButtons/StyledButtons"
 import { AnimatedBackground } from "../../../../componets/AnimatedBackground/Animatedbackground";
 
 const Hero = () => {
-    const StyledHero = styled("div")(() => ({
-        backgroundColor: "#282828",
-        height: "100vh",
+    const StyledHero = styled("div")(({ theme }) => ({
+        backgroundColor: theme.palette.secondary.main,
+        minHeight: "100vh",
+        minWidth: "100vw",
         display: "flex",
         alignItems: "center",
-    }));
+        [theme.breakpoints.up('xs')]: { // <= mobile
+            paddingTop: "200px",
+            minwidth: "100vw",
 
-    const StyledImg = styled("img")(() => ({
+        },
+        [theme.breakpoints.up('md')]: { // >=mobile
+            paddingTop: "0px",
+            minwidth: "100vw",
+        }
+    }))
+
+    const StyledImg = styled("img")(({theme}) => ({
         width: "100%",
         borderRadius: "50%",
-        backgroundColor: " white",
+        backgroundColor: " white",//fundo da imagen
         border: "1px solid #bfd255",
         boxShadow: "10px 2px 14px 0px rgba(0,0,0,0.85)", // Sombreamento
+        [theme.breakpoints.up('xs')]: { // <= mobile
+            width: "80%",
+
+        },
+        [theme.breakpoints.up('md')]: { // >=mobile
+            width: "100%",
+        }
     }));
 
     return (
