@@ -6,6 +6,11 @@ import MailIcon from '@mui/icons-material/Mail';
 import StyledButtons from "../../../../componets/StyledButtons/StyledButtons"
 import { AnimatedBackground } from "../../../../componets/AnimatedBackground/Animatedbackground";
 import { useNavigate } from 'react-router-dom';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import IconButton from '@mui/material/IconButton';
+
 
 
 
@@ -50,6 +55,14 @@ const Hero = () => {
             width: "100%",
         }
     }));
+    const iconStyle = {
+        color: "white",
+        fontSize: "2rem",
+        margin: "0 8px",
+        '&:hover': {
+            color: ' #bfd255' // Change color on hover
+        }
+    };
 
     return (
         <StyledHero>
@@ -84,6 +97,32 @@ const Hero = () => {
                                 </StyledButtons>
                             </Grid>
                         </Grid>
+                        <Box display="flex" justifyContent="center" pt={4}>
+                            <IconButton
+                                href="https://www.linkedin.com/in/seu-perfil" // Substitua pelo link do seu perfil LinkedIn
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={iconStyle}
+                            >
+                                <LinkedInIcon />
+                            </IconButton>
+                            <IconButton
+                                href="https://www.instagram.com/seu-perfil" // Substitua pelo link do seu perfil Instagram
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={iconStyle}
+                            >
+                                <InstagramIcon />
+                            </IconButton>
+                            <IconButton
+                                href="https://github.com/seu-perfil" // Substitua pelo link do seu perfil GitHub
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={iconStyle}
+                            >
+                                <GitHubIcon />
+                            </IconButton>
+                        </Box>
                     </Grid>
                 </Grid>
             </Container>

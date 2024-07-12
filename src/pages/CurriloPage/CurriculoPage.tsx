@@ -5,10 +5,10 @@ const CurriculumPage = () => {
     return (
         <Container>
             <Typography variant="h2" gutterBottom>
-                Design de Currículo
+                Sabrina eu te amo
             </Typography>
             <Typography variant="body1">
-                Aqui você pode desenhar e baixar seu currículo.
+                Voce e chata demais 
             </Typography>
             {/* Adicione o design do currículo aqui */}
         </Container>
