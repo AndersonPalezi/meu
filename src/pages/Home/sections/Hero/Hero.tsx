@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import IconButton from '@mui/material/IconButton';
+import IconButton from '@mui/material/IconButton';// alem de importar os tres icones tambem e nescessario importar iconButton
 
 
 
