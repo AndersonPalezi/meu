@@ -5,8 +5,20 @@ import DownloadIcon from '@mui/icons-material/Download';
 import MailIcon from '@mui/icons-material/Mail';
 import StyledButtons from "../../../../componets/StyledButtons/StyledButtons"
 import { AnimatedBackground } from "../../../../componets/AnimatedBackground/Animatedbackground";
+import { useNavigate } from 'react-router-dom';
+
+
 
 const Hero = () => {
+    const navigate = useNavigate();
+  
+    const handleContactClick = () => {
+        window.location.href = 'mailto:andersonpalezidev@gmail.com';
+    };
+
+    const handleDownloadClick = () => {
+        navigate('/curriculum');
+    };
     const StyledHero = styled("div")(({ theme }) => ({
         backgroundColor: theme.palette.secondary.main,
         minHeight: "100vh",
@@ -14,13 +26,13 @@ const Hero = () => {
         display: "flex",
         alignItems: "center",
         [theme.breakpoints.up('xs')]: { // <= mobile
-            paddingTop: "200px",
-            minwidth: "100vw",
+            paddingTop: "100px",
+            minwidth: "100vw",// colocando um min para cobrir a tela menor ou igual mobile
 
         },
         [theme.breakpoints.up('md')]: { // >=mobile
             paddingTop: "0px",
-            minwidth: "100vw",
+            minwidth: "100vw",//colocando o minimo maior ouigual mobile 
         }
     }))
 
@@ -58,14 +70,14 @@ const Hero = () => {
                         <Typography color="white" variant="h2" textAlign="center"pb={4}>Desenvolvedor front-end</Typography>
                         <Grid container display="flex" justifyContent="center" spacing={3}>
                             <Grid item xs={12} md={4} display="flex" justifyContent="center"pt={3}>
-                                <StyledButtons startIcon={<DownloadIcon />}>
+                                <StyledButtons onClick={handleDownloadClick} startIcon={<DownloadIcon />}>
                                     <Typography>
                                         Download CV
                                     </Typography>
                                 </StyledButtons>
                             </Grid>
                             <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                <StyledButtons startIcon={<MailIcon />}>
+                                <StyledButtons onClick={handleContactClick} startIcon={<MailIcon />}>
                                     <Typography>
                                         Contato
                                     </Typography>
