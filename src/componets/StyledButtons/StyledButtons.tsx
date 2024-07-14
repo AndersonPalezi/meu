@@ -8,7 +8,7 @@ interface StyledButtonsProps {
 }
 
 const StyledButtons: React.FC<StyledButtonsProps> = ({ children, startIcon, onClick }) => {
-    const StyledButton = styled("button")(({ theme }) => ({
+    const StyledButton = styled("button")(() => ({
         backgroundColor: "transparent",
         border: "1px solid #fff",
         borderRadius: "8px",
@@ -23,7 +23,7 @@ const StyledButtons: React.FC<StyledButtonsProps> = ({ children, startIcon, onCl
         gap: "10px",
         boxShadow: "10px 2px 14px 0px rgba(0,0,0,0.85)",
         "&:hover": {
-            backgroundColor: theme.palette.primary.light,
+            backgroundColor: "#bfd255",
             color: "#000000",
         }
     }));

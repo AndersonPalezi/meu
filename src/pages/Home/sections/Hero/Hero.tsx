@@ -1,4 +1,4 @@
-import { Container, styled, Typography,Box } from "@mui/material";
+import { Container, styled, Typography, Box } from "@mui/material";
 import Avatar from "../../../../assets/images/avatar.png";
 import { Grid } from "@mui/material";
 import DownloadIcon from '@mui/icons-material/Download';
@@ -16,7 +16,7 @@ import IconButton from '@mui/material/IconButton';// alem de importar os tres ic
 
 const Hero = () => {
     const navigate = useNavigate();
-  
+
     const handleContactClick = () => {
         window.location.href = 'mailto:andersonpalezidev@gmail.com';
     };
@@ -41,7 +41,7 @@ const Hero = () => {
         }
     }))
 
-    const StyledImg = styled("img")(({theme}) => ({
+    const StyledImg = styled("img")(({ theme }) => ({
         width: "100%",
         borderRadius: "50%",
         backgroundColor: " white",//fundo da imagen
@@ -55,15 +55,6 @@ const Hero = () => {
             width: "100%",
         }
     }));
-    const iconStyle = {
-        color: "white",
-        fontSize: "2rem",
-        margin: "0 8px",
-        '&:hover': {
-            color: ' #bfd255' // Change color on hover
-        }
-    };
-
     return (
         <StyledHero>
             <Container maxWidth="lg">
@@ -76,13 +67,13 @@ const Hero = () => {
                             <Box position="relative" textAlign="center">
                                 <StyledImg src={Avatar} alt="Avatar" />
                             </Box>
-                            </Box>
+                        </Box>
                     </Grid>
                     <Grid item xs={12} md={8}>
                         <Typography color="white" variant="h1" textAlign="center" pb={2}>Anderson Palezi</Typography>
-                        <Typography color="white" variant="h2" textAlign="center"pb={4}>Desenvolvedor front-end</Typography>
+                        <Typography color="white" variant="h2" textAlign="center" pb={4}>Desenvolvedor front-end</Typography>
                         <Grid container display="flex" justifyContent="center" spacing={3}>
-                            <Grid item xs={12} md={4} display="flex" justifyContent="center"pt={3}>
+                            <Grid item xs={12} md={4} display="flex" justifyContent="center" pt={3}>
                                 <StyledButtons onClick={handleDownloadClick} startIcon={<DownloadIcon />}>
                                     <Typography>
                                         Download CV
@@ -99,28 +90,49 @@ const Hero = () => {
                         </Grid>
                         <Box display="flex" justifyContent="center" pt={4}>
                             <IconButton
-                                href="https://www.linkedin.com/in/seu-perfil" // Substitua pelo link do seu perfil LinkedIn
+                                href="https://www.linkedin.com/in/seu-perfil"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                style={iconStyle}
+                                sx={{
+                                    fontSize: "2.2rem", // Aumenta o tamanho do ícone
+                                    color: "white",
+                                    margin: "0 12px",
+                                    '&:hover': {
+                                        color: '#bfd255', // Muda a cor ao passar o mouse
+                                    }
+                                }}
                             >
-                                <LinkedInIcon />
+                                <LinkedInIcon fontSize="inherit" />
                             </IconButton>
                             <IconButton
-                                href="https://www.instagram.com/seu-perfil" // Substitua pelo link do seu perfil Instagram
+                                href="https://www.instagram.com/seu-perfil"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                style={iconStyle}
+                                sx={{
+                                    fontSize: "2.2rem", // Aumenta o tamanho do ícone
+                                    color: "white",
+                                    margin: "0 12px",
+                                    '&:hover': {
+                                        color: '#bfd255', // Muda a cor ao passar o mouse
+                                    }
+                                }}
                             >
-                                <InstagramIcon />
+                                <InstagramIcon fontSize="inherit" />
                             </IconButton>
                             <IconButton
-                                href="https://github.com/seu-perfil" // Substitua pelo link do seu perfil GitHub
+                                href="https://github.com/seu-perfil"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                style={iconStyle}
+                                sx={{
+                                    fontSize: "2.2rem", // Aumenta o tamanho do ícone
+                                    color: "white",
+                                    margin: "0 12px",
+                                    '&:hover': {
+                                        color: '#bfd255', // Muda a cor ao passar o mouse
+                                    }
+                                }}
                             >
-                                <GitHubIcon />
+                                <GitHubIcon fontSize="inherit" />
                             </IconButton>
                         </Box>
                     </Grid>
