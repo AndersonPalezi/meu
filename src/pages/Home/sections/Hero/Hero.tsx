@@ -1,5 +1,5 @@
 import { Container, styled, Typography, Box } from "@mui/material";
-import Avatar from "../../../../assets/images/avatar.png";
+import Avatar from "../../../../assets/images/Avatar.jpg";
 import { Grid } from "@mui/material";
 import DownloadIcon from '@mui/icons-material/Download';
 import MailIcon from '@mui/icons-material/Mail';
@@ -44,8 +44,8 @@ const Hero = () => {
     const StyledImg = styled("img")(({ theme }) => ({
         width: "100%",
         borderRadius: "50%",
-        backgroundColor: " white",//fundo da imagen
-        border: "1px solid #bfd255",
+        backgroundColor: " #b5dcd6",//fundo da imagen
+        border: "1px solid #5e6148",
         boxShadow: "10px 2px 14px 0px rgba(0,0,0,0.85)", // Sombreamento
         [theme.breakpoints.up('xs')]: { // <= mobile
             width: "80%",
@@ -90,7 +90,7 @@ const Hero = () => {
                         </Grid>
                         <Box display="flex" justifyContent="center" pt={4}>
                             <IconButton
-                                href="https://www.linkedin.com/in/seu-perfil"
+                                href="https://www.linkedin.com/in/anderson-palezi-968611239/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 sx={{
@@ -105,7 +105,7 @@ const Hero = () => {
                                 <LinkedInIcon fontSize="inherit" />
                             </IconButton>
                             <IconButton
-                                href="https://www.instagram.com/seu-perfil"
+                                href="https://www.instagram.com/anderson_palezi/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 sx={{
@@ -120,7 +120,7 @@ const Hero = () => {
                                 <InstagramIcon fontSize="inherit" />
                             </IconButton>
                             <IconButton
-                                href="https://github.com/seu-perfil"
+                                href="https://github.com/AndersonPalezi?tab=repositories"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 sx={{
